@@ -928,6 +928,15 @@ class Avanza:
             )
         )
 
+    def get_transactions(self, account_id: str, from_date: str='2020-01-01'):
+        '''
+            Testing
+        '''
+        return self.__call(
+            HttpMethod.GET,
+            Route.TRANSACTIONS_PATH.value.format(account_id,from_date)
+        )
+
     def get_positions(self):
         """ Get owned positions
 

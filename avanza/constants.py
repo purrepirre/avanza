@@ -89,6 +89,6 @@ class Route(enum.Enum):
     OVERVIEW_PATH = '/_mobile/account/overview'
     POSITIONS_PATH = '/_mobile/account/positions'
     TOTP_PATH = '/_api/authentication/sessions/totp'
-    TRANSACTIONS_PATH = '/_mobile/account/transactions/{}'
+    TRANSACTIONS_PATH = '/_mobile/account/transactions/{}?from={}'
     WATCHLISTS_ADD_DELETE_PATH = '/_api/usercontent/watchlist/{}/orderbooks/{}'
     WATCHLISTS_PATH = '/_mobile/usercontent/watchlist'
