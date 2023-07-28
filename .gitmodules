@@ -1,0 +1,3 @@
+[submodule "avanza-orig"]
+	path = avanza-orig
+	url = https://github.com/Qluxzz/avanza.git
