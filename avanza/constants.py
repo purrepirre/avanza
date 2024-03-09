@@ -104,8 +104,6 @@ class HttpMethod(enum.Enum):
     DELETE = 4
 
 class Route(enum.Enum):
-    BOSSE = 'Bosse'
-    ACCOUNT_OVERVIEW_PATH = '/_mobile/account/{}/overview'
     ACCOUNTS_POSITIONS_PATH = '/_api/position-data/positions'
     AUTHENTICATION_PATH = '/_api/authentication/sessions/usercredentials'
     CATEGORIZED_ACCOUNTS = '/_api/account-overview/overview/categorizedAccounts'
