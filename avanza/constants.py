@@ -96,7 +96,11 @@ class StopLossTriggerType(enum.Enum):
 class StopLossPriceType(enum.Enum):
     MONETARY = 'MONETARY'
     PERCENTAGE = 'PERCENTAGE'
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> c74fdeb2e302a3890e429becac590f67587dd4a5
 
 class HttpMethod(enum.Enum):
     POST = 1
@@ -105,10 +109,16 @@ class HttpMethod(enum.Enum):
     DELETE = 4
 
 class Route(enum.Enum):
+<<<<<<< HEAD
     BOSSE = 'Bosse'
     ACCOUNT_OVERVIEW_PATH = '/_mobile/account/{}/overview'
     ACCOUNTS_POSITIONS_PATH = '/_api/position-data/positions'
     AUTHENTICATION_PATH = '/_api/authentication/sessions/usercredentials'
+=======
+    ACCOUNTS_POSITIONS_PATH = '/_api/position-data/positions'
+    AUTHENTICATION_PATH = '/_api/authentication/sessions/usercredentials'
+    CATEGORIZED_ACCOUNTS = '/_api/account-overview/overview/categorizedAccounts'
+>>>>>>> c74fdeb2e302a3890e429becac590f67587dd4a5
     CHARTDATA_PATH = '/_api/price-chart/stock/{}'
     CURRENT_OFFERS_PATH = '/_api/customer-offer/currentoffers/'
     DEALS_AND_ORDERS_PATH = '/_mobile/account/dealsandorders'
@@ -124,7 +134,11 @@ class Route(enum.Enum):
     MONTHLY_SAVINGS_REMOVE_PATH = '/_api/transfer/monthly-savings/{}/{}/'
     MONTHLY_SAVINGS_RESUME_PATH = '/_api/transfer/monthly-savings/{}/{}/resume'
     NOTE_PATH = '/_api/contract-notes/documents/{}/{}/note.pdf'
+<<<<<<< HEAD
     ORDER_DELETE_PATH = '/_api/order?accountId={}&orderId={}'
+=======
+    ORDER_DELETE_PATH = '/_api/trading-critical/rest/order/delete'
+>>>>>>> c74fdeb2e302a3890e429becac590f67587dd4a5
     ORDER_GET_PATH = '/_mobile/order/{}?accountId={}&orderId={}'
     ORDER_PLACE_PATH = '/_api/trading-critical/rest/order/new'
     ORDER_PLACE_STOP_LOSS_PATH = '/_api/trading-critical/rest/stoploss/new'
@@ -133,7 +147,6 @@ class Route(enum.Enum):
     ORDER_EDIT_PATH = '/_api/order/{}/{}'
     ORDERBOOK_LIST_PATH = '/_mobile/market/orderbooklist/{}'
     ORDERBOOK_PATH = '/_mobile/order/{}?orderbookId={}'
-    OVERVIEW_PATH = '/_mobile/account/overview'
     POSITIONS_PATH = '/_mobile/account/positions'
     PRICE_ALERT_PATH = '/_cqbe/marketing/service/alert/{}'
     STOP_LOSS_PATH = '/_api/trading-critical/rest/stoploss'
