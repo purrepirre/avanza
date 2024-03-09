@@ -18,7 +18,7 @@ URL = 'https://github.com/Qluxzz/avanza'
 EMAIL = 'andre.eric.andersson@gmail.com'
 AUTHOR = 'André Andersson'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '2.2.1'
+VERSION = '9.0.0'
 
 REQUIRED = [
     'requests>=2',

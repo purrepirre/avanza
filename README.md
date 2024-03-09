@@ -18,12 +18,19 @@ pip install avanza-api
 
 Here are the steps to get your TOTP Secret:
 
-1. Go to Mina Sidor > Profil > Sajtinställningar > Tvåfaktorsinloggning and click "Återaktivera". (*Only do this step if you have already set up two-factor auth.*)
+1. Go to Profil > Inställningar > Sajtinställningar > Inloggning och utloggning > Användarnamn > Tvåfaktorsinloggning and click "Återaktivera". (*Only do this step if you have already set up two-factor auth.*)
 1. Click "Aktivera" on the next screen.
 1. Select "Annan app för tvåfaktorsinloggning".
 1. Click "Kan du inte scanna QR-koden?" to reveal your TOTP Secret.
+1. Generate the TOTP code using the python code below and paste the TOTP code in the field below where you found the TOTP Secret.
 1. Done! From now on all you have to do is supply your secret in the constructor as in the examples below.
-
+#### Generate TOTP code:
+```Python
+import hashlib
+import pyotp
+totp = pyotp.TOTP('MY_TOTP_SECRET', digest=hashlib.sha1)
+print(totp.now())
+```
 ## Example
 
 Authenticate and fetch account overview:
@@ -49,11 +56,9 @@ avanza = Avanza({
     'totpSecret': 'MY_TOTP_SECRET'
 })
 
-accountId = 'XXXXXXX'
-
 report = avanza.get_insights_report(
-    accountId,
-    TimePeriod.ONE_WEEK
+    account_id='XXXXXXX',
+    time_period=TimePeriod.ONE_WEEK
 )
 ```
 
@@ -67,19 +72,13 @@ avanza = Avanza({
     'totpSecret': 'MY_TOTP_SECRET'
 })
 
-account_id = 'XXXXXXX'
-order_book_id = 'XXXXXX'
-buy_price = 13.37
-valid_until = date.fromisoformat('2011-11-11')
-volume = 42
-
 result = avanza.place_order(
-    account_id,
-    order_book_id,
-    OrderType.BUY,
-    buy_price,
-    valid_until,
-    volume
+    account_id='XXXXXXX',
+    order_book_id='XXXXXX',
+    order_type=OrderType.BUY,
+    price=13.37,
+    valid_until=date.fromisoformat('2011-11-11'),
+    volume=42
 )
 ```
 
